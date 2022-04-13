@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 
 namespace Igtampe.Hashbrown {
 
-    /// <summary>A Hasher. Maybe this will also be a separate thing quien sabe</summary>
+    /// <summary>The Hashbrown Hasher</summary>
     public class Hashbrown {
 
         private readonly string Salt;
