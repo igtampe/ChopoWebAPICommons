@@ -49,5 +49,13 @@ namespace Igtampe.Controllers {
         public NotFoundObjectResult NotFoundItem(string ItemName, object? ID)
             => base.NotFound(ErrorResult.NotFound($"{ItemName} with ID '{ID}' was not found"));
 
+        /// <summary>418 I'm Teapot : A request you don't wish to fulfill</summary>
+        /// <param name="Message"></param>
+        /// <returns></returns>
+        public IActionResult Teacup(string? Message = null)
+            => Message is null
+                ? StatusCode(418) 
+                : StatusCode(418, Message);
+
     }
 }
