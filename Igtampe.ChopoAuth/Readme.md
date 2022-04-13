@@ -12,5 +12,6 @@ A User object to store users in a DB. Uses Hashbrown for
 |IsAdmin|Admin Role boolean. The only default Role in a User object|
 
 |Methods|Description|
+|-|-|
 |UpdatePass()|Hashes and update the password of this user|
 |CheckPass()|Hashes an attempt and checks it against the already hashed password of this user|
