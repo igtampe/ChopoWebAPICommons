@@ -172,7 +172,7 @@ namespace Igtampe.Controllers {
             if (Request.Username is null || Request.Password is null) { return BadRequest("User or Password was empty"); }
 
             User NewUser = new() { Username = Request.Username };
-            NewUser.UpdatePass(NewUser.Password);
+            NewUser.UpdatePass(Request.Password);
 
             if (!await DB.User.AnyAsync()) {
                 //This is the first account and *MUST* be an admin
